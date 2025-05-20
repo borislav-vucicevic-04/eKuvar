@@ -1,0 +1,105 @@
+.sastojciFormWrapper {
+  /* Variables */
+  --sastojciFormGap: 0.75em;
+  --titleFontSize: 1.5rem;
+  --tablePadding: 0.5rem;
+  --buttonSize: 2rem;
+  /* Styling */
+  display: flex;
+  flex-direction: column;
+  gap: var(--sastojciFormGap);
+}
+.sastojsciForm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: var(--sastojciFormGap);
+}
+.sastojciFormWrapper .title {
+  font-weight: bold;
+  color: var(--midnight-blue);
+  font-size: var(--titleFontSize);
+}
+.sastojsciForm input, .sastojsciForm button {
+  flex: 1;
+  font-size: 1rem;
+  border: none;
+  outline: 2px solid var(--black);
+  font-family: inherit;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.sastojsciForm input:focus {
+  outline-color: var(--red);
+}
+.sastojsciForm button {
+  padding: calc(0.5rem + 1);
+  outline: none;
+  flex: 0;
+  grid-row: span 2;
+  margin-top: auto;
+  background-color: var(--midnight-blue);
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 500ms;
+}
+.sastojsciForm button:hover {
+  filter: brightness(175%);
+}
+.sastojsciForm .labelNaziv, .sastojsciForm .labelKolicina {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.sastojciFormWrapper:has(:focus) .title {
+  color: var(--red);
+}
+.sastojsciForm:has(input[id=naziv]:focus) .labelNaziv,
+.sastojsciForm:has(input[id=kolicina]:focus) .labelKolicina {
+  color: var(--red);
+}
+.table {
+  width: 100%;
+  border-spacing: 0 ;
+  border: solid 2px var(--black);
+}
+.table th {
+  border-bottom: solid 2px var(--black);
+  background-color: var(--soft-gray);
+}
+.table tr:nth-of-type(2n) {
+  background-color: var(--soft-gray);
+}
+.table td, .table th {
+  text-align: left;
+  padding: var(--tablePadding);
+}
+.table button {
+  height: var(--buttonSize);
+  width: var(--buttonSize);
+  background-color: var(--red);
+  box-sizing: border-box;
+  padding: 0.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 500ms;
+}
+.table button:hover {
+  filter: brightness(150%);
+}
+.table button img {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+}
+.requestPending {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  z-index: 9999;
+  cursor: wait;
+}

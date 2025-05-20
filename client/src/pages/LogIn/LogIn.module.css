@@ -1,0 +1,117 @@
+.container {
+  /* variables */
+  --formGap: 2rem;
+  --formPadding: 1.25rem;
+  --formBorderRadius: 1.25rem;
+  --labelGap: 0.25rem;
+  --labelFontSize: 1.25rem;
+  --labelInputHeight: 2rem;
+  --labelInputPadding: 0.25rem;
+  --buttonFontSize: 2rem;
+  --buttonHeight: 2rem;
+  --buttonPadding: 0.75rem;
+  --checkboxHeight: 1rem;
+  --checkboxFontSize: 1rem;
+  --errorMessageFontSize: 1rem;
+
+  /* styling */
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logInForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--formGap);
+  border-radius: var(--formBorderRadius);
+  padding: var(--formPadding);
+  min-width: 30rem;
+  box-shadow: 0px 4px 10px rgba(29, 29, 29, 0.6); /* Sjena u boji #1D1D1D */
+  backdrop-filter: blur(10px); /* Zamagljivanje pozadine za stakleni efekat */
+  animation: fly-in 0.5s;
+}
+.logInForm label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--labelGap);
+  font-size: var(--labelFontSize);
+}
+.logInForm label span {
+  font-weight: bold;
+}
+.logInForm label input {
+  font-family: inherit;
+  height: var(--labelInputHeight);
+  font-size: var(--labelFontSize);
+  padding: var(--labelInputPadding);
+  border-radius: var(--labelInputPadding);
+  border: none;
+  outline: solid 2px var(--black);
+}
+.logInForm label:has(input:focus) span {
+  color: var(--red);
+}
+.logInForm label input:focus {
+  outline-color: var(--red);
+}
+.logInForm button {
+  background-color: var(--red);
+  color: var(--white);
+  font-size: var(--buttonFontSize);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: bold;
+  padding: var(--buttonPadding);
+  border-radius: var(--buttonPadding);
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.logInForm button:hover {
+  filter: brightness(135%);
+}
+label.checkboxContainer {
+  display: flex;
+  flex-direction: row;
+  gap: var(--labelGap);
+  font-size: var(--checkboxFontSize);
+  align-items: center;
+  cursor: pointer;
+}
+label.checkboxContainer input {
+  height: var(--checkboxHeight);
+  width: var(--checkboxHeight);
+  margin: 0;
+  outline: none;
+  accent-color: var(--red);
+}
+label.checkboxContainer:has(input:focus) span {
+  color: var(--black);
+}
+label.checkboxContainer:has(input:checked) span {
+  color: var(--red);
+}
+.errorMessage {
+  font-size: var(--errorMessageFontSize);
+  color: var(--purple) !important;
+}
+.linksWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@keyframes fly-in {
+  from {
+    top: -50%;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

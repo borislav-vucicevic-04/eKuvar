@@ -1,0 +1,31 @@
+.container {
+  /* variables */
+  --h1FontSize: 3rem;
+  --pFontSize: 1.25rem;
+  /* styling */
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container img {
+  height: 300px;
+}
+.container h1 {
+  margin: 0;
+  font-family: inherit;
+  font-size: var(--h1FontSize);
+  color: var(--red);
+}
+.container p {
+  color: var(--black);
+  font-size: var(--pFontSize);
+}
+.container a {
+  color: var(--blue);
+  font-size: var(--pFontSize);
+}

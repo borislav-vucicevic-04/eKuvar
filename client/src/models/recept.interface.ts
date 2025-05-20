@@ -1,0 +1,16 @@
+export default interface IRecept {
+  id: number,
+  korisnik: string,
+  datum_kreiranja: string,
+  naslov: string,
+  porcija: number,
+  opis: string,
+  priprema: string,
+  prosjecna_ocjena: number,
+  broj_ocjena: number,
+  broj_omiljenih: number,
+  posno: boolean,
+  vegansko: boolean,
+  slatko: boolean,
+  mojRecept: boolean,
+}

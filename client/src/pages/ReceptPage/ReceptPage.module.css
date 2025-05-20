@@ -1,0 +1,267 @@
+.receptPageContainer {
+  /* Variables */
+  --receptPageGap: 2rem;
+  --receptPageHeaderPadding: 2rem;
+  --receptPageH1FontSize: 3.5rem;
+  --receptPageH2FontSize: 2.25rem;
+  --receptPageH3FontSize: 1.5rem;
+  --receptPageBtnSize: 3rem;
+  --receptPageSastojciPadding: 0.75rem;
+  --receptContentGap: 1.5rem;
+  --submitBtnHeight: 3rem;
+  --submitBtnFontSize: 1.5rem;
+  --submitBtnPadding: 0.5rem;
+  /* Style */
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr;
+  gap: var(--receptPageGap);
+}
+.receptPageHeader {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--midnight-blue);
+  padding: var(--receptPageHeaderPadding) 0;
+  border-bottom: solid 2px var(--bread);
+}
+.receptPageHeader h1 {
+  margin: 0;
+  font-size: var(--receptPageH1FontSize);
+} 
+.receptPageHeader h1::first-letter {
+  text-transform: uppercase;
+} 
+.receptPageHeader .buttons {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+.receptControlBtn{
+  height: var(--receptPageBtnSize);
+  aspect-ratio: 1 / 1;
+  background-color: var(--red);
+  border-radius: 50%;
+  transition: all 500ms;
+  cursor: pointer;
+  border: none;
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: solid 2px var(--red);
+}
+.receptControlBtn.omiljen {
+  background-color: var(--white);
+  background-image: url(./../../assets/full-heart.svg);
+}
+.omiljenoBtn {
+  background-image: url(./../../assets/empty-heart.svg);
+}
+.omiljenoBtn:hover {
+  background-color: var(--white);
+  background-image: url(./../../assets/full-heart.svg);
+}
+.editBtn {
+  background-size: 60%;
+  background-image: url(./../../assets/edit.svg);
+}
+.editBtn:hover {
+  background-color: var(--white);
+  background-image: url(./../../assets/red-edit.svg);
+}
+.deleteBtn {
+  background-image: url(./../../assets/trash-can.svg);
+}
+.deleteBtn:hover {
+  background-color: var(--white);
+  background-image: url(./../../assets/red-trash-can.svg);
+}
+.printBtn {
+  background-image: url(./../../assets/print.svg);
+}
+.printBtn:hover {
+  background-color: var(--white);
+  background-image: url(./../../assets/red-print.svg);
+}
+.receptSastojci {
+  box-sizing: border-box;
+  padding: var(--receptPageSastojciPadding);
+  color: var(--black);
+  border-right: solid 2px var(--bread);
+}
+.receptSastojci span {
+  font-weight: bold;
+  text-align: center;
+  font-size: var(--receptPageH3FontSize);
+}
+.receptSastojci ul li {
+  margin: 0.75rem 0;
+}
+.receptContent {
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  gap: var(--receptContentGap);
+}
+.receptSection {
+  border-bottom: solid 2px var(--bread);
+  padding-bottom: 1.5rem;
+}
+.receptSection h2, .receptSection h3, .receptSection p, .receptSection li {
+  margin: 1rem 0;
+}
+.receptSection h3 {
+  font-size: var(--receptPageH3FontSize);
+  color: var(--midnight-blue);
+}
+.receptSection .title {
+  font-size: var(--receptPageH2FontSize);
+  color: var(--midnight-blue);
+}
+.receptSection .contentWrapper {
+  width: 75%;
+  margin: auto;
+}
+.tabela {
+  border-spacing: 0;
+  border: solid 1px var(--black);
+  width: 100%;
+}
+.tabela th, .tabela td {
+  border: solid 1px var(--black);
+  padding: 0.5rem;
+}
+.tabela th {
+  text-align: left;
+}
+.tabela td {
+  text-align: right;
+}
+.tabela tr:nth-child(2n) {
+  background-color: var(--soft-gray);
+}
+.zvjezdice {
+  width: fit-content;
+  font-size: 1.5rem;
+  background: linear-gradient(
+    to right,
+    var(--gold-like) var(--rating-percent),
+    var(--soft-gray) var(--rating-percent)
+  );
+  background-clip: text;
+  color: transparent;
+}
+.ratingForm {
+  width: fit-content;
+  margin: auto
+}
+.ratingForm .zvjezdice {
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+}
+.zvjezda {
+  display: inline-block;
+  cursor: pointer;
+}
+.ratingForm .zvjezdice:has(.zvjezda:nth-child(1):hover) {
+  --rating-percent: 20% !important;
+}
+.ratingForm .zvjezdice:has(.zvjezda:nth-child(2):hover) {
+  --rating-percent: 40% !important;
+}
+.ratingForm .zvjezdice:has(.zvjezda:nth-child(3):hover) {
+  --rating-percent: 60% !important;
+}
+.ratingForm .zvjezdice:has(.zvjezda:nth-child(4):hover) {
+  --rating-percent: 80% !important;
+}
+.ratingForm .zvjezdice:has(.zvjezda:nth-child(5):hover) {
+  --rating-percent: 100% !important;
+}
+.ratingForm input {
+  display: none;
+}
+.ratingForm .submitBtn {
+  height: var(--submitBtnHeight);
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--submitBtnPadding);
+  border-radius: var(--submitBtnPadding);
+  font-size: var(--submitBtnFontSize);
+  background-color: var(--midnight-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  color: var(--white);
+  transition: all 500ms;
+}
+.ratingForm .submitBtn:hover {
+  filter: brightness(175%);
+}
+.commentForm {
+  width: 100%;
+}
+.commentForm .textareaWrapper {
+  position: relative;
+}
+.commentForm .textareaWrapper span {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--soft-gray);
+}
+.commentForm textarea {
+  width: 100% !important;
+  resize: vertical;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: solid 2px var(--bread);
+  transition: box-shadow 500ms;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background-color: var(--white);
+  margin-bottom: 0.5rem;
+  min-height: 5rem;
+}
+.commentForm textarea:focus {
+  outline: solid 2px var(--bread);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.commentForm button {
+  box-sizing: border-box;
+  padding: 0.375rem;
+  border-radius: 0.375rem;
+  border: none;
+  background-color: var(--midnight-blue);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 500ms;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+.commentForm button:hover {
+  filter: brightness(175%);
+}
+.commentForm button::first-letter {
+  text-transform: capitalize;
+}
+.deleteReceptPending {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  z-index: 9999;
+  cursor: wait;
+  background-color: rgba(0, 0, 0, 0.0);
+}

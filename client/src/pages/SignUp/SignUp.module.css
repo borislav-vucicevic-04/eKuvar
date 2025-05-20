@@ -1,0 +1,101 @@
+.container {
+  /* variables */
+  --formGap: 1.5rem;
+  --formPadding: 1.25rem;
+  --formBorderRadius: 1.25rem;
+  --labelGap: 0.25rem;
+  --labelFontSize: 1.25rem;
+  --labelInputHeight: 2rem;
+  --labelInputPadding: 0.25rem;
+  --buttonFontSize: 2rem;
+  --buttonHeight: 2rem;
+  --buttonPadding: 0.75rem;
+  --errorMessageFontSize: 0.75rem;
+
+  /* styling */
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signUpForm {
+  max-width: 35%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--formGap);
+  border-radius: var(--formBorderRadius);
+  padding: var(--formPadding);
+  min-width: 30rem;
+  box-shadow: 0px 4px 10px rgba(29, 29, 29, 0.6); /* Sjena u boji #1D1D1D */
+  backdrop-filter: blur(10px); /* Zamagljivanje pozadine za stakleni efekat */
+  animation: fly-in 0.5s;
+}
+.signUpForm label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--labelGap);
+  font-size: var(--labelFontSize);
+}
+.signUpForm label span {
+  font-weight: bold;
+}
+.signUpForm label input {
+  font-family: inherit;
+  height: var(--labelInputHeight);
+  font-size: var(--labelFontSize);
+  padding: var(--labelInputPadding);
+  border-radius: var(--labelInputPadding);
+  border: none;
+  outline: solid 2px var(--black);
+}
+.signUpForm label:has(input:focus) span {
+  color: var(--red);
+}
+.signUpForm label input:focus {
+  outline-color: var(--red);
+}
+.signUpForm button {
+  background-color: var(--red);
+  color: var(--white);
+  font-size: var(--buttonFontSize);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: bold;
+  padding: var(--buttonPadding);
+  border-radius: var(--buttonPadding);
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.signUpForm button:hover {
+  filter: brightness(135%);
+}
+.errorMessage {
+  font-size: var(--errorMessageFontSize);
+  color: var(--purple);
+  text-align: justify;
+}
+.pendingRequest {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: wait;
+}
+@keyframes fly-in {
+  from {
+    top: -50%;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

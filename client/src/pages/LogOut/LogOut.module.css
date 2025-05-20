@@ -1,0 +1,42 @@
+.container {
+  /* variables */
+  --formGap: 2rem;
+  --formPadding: 1.25rem;
+  --formBorderRadius: 1.25rem;
+
+  /* styling */
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logInForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--formGap);
+  border-radius: var(--formBorderRadius);
+  padding: var(--formPadding);
+  min-width: 30rem;
+  box-shadow: 0px 4px 10px rgba(29, 29, 29, 0.6); /* Sjena u boji #1D1D1D */
+  backdrop-filter: blur(10px); /* Zamagljivanje pozadine za stakleni efekat */
+  animation: fly-in 0.5s;
+}
+h1 {
+  text-align: center;
+  color: var(--midnight-blue);
+  font-size: 2.5rem;
+}
+@keyframes fly-in {
+  from {
+    top: -50%;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

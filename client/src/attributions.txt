@@ -1,0 +1,15 @@
+logo icon:
+<a href="https://www.flaticon.com/free-icons/cookbook" title="cookbook icons">Cookbook icons created by Vectorslab - Flaticon</a>
+
+filter icon:
+<a href="https://www.flaticon.com/free-icons/filter" title="filter icons">Filter icons created by riajulislam - Flaticon</a>
+
+
+edit icon:
+<a href="https://www.flaticon.com/free-icons/document" title="document icons">Document icons created by Freepik - Flaticon</a>
+
+trash can:
+<a href="https://www.flaticon.com/free-icons/recycle-bin" title="recycle bin icons">Recycle bin icons created by Hilmy Abiyyu A. - Flaticon</a>
+
+pring: 
+<a href="https://www.flaticon.com/free-icons/print" title="print icons">Print icons created by Creatype - Flaticon</a>

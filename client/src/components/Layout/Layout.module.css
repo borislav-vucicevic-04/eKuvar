@@ -1,0 +1,18 @@
+.layoutContainer {
+  /* Variables */
+  --layoutPadding: 1rem;
+  /* Styling */
+  display: flex;
+  height: 100dvh;
+  width: 100dvw;
+  gap: var(--layoutPadding);
+}
+.layoutContainer main {
+  flex: 1;
+  position: relative;
+  align-self: stretch;
+  justify-self: stretch;
+  box-sizing: border-box;
+  padding: var(--layoutPadding);
+  overflow: auto;
+}

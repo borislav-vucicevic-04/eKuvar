@@ -1,0 +1,22 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const getAllRecept_controller_1 = __importDefault(require("../controllers/getAllRecept.controller"));
+const getRecept_controller_1 = __importDefault(require("../controllers/getRecept.controller"));
+const insertRecept_controller_1 = __importDefault(require("../controllers/insertRecept.controller"));
+const updateRecept_controller_1 = __importDefault(require("../controllers/updateRecept.controller"));
+const deleteRecept_cotroller_1 = __importDefault(require("../controllers/deleteRecept.cotroller"));
+const getAllOmiljeno_controller_1 = __importDefault(require("../controllers/getAllOmiljeno.controller"));
+const generateReceptReport_controller_1 = __importDefault(require("../controllers/generateReceptReport.controller"));
+const receptRoutes = (0, express_1.Router)();
+receptRoutes.post('/', getAllRecept_controller_1.default);
+receptRoutes.get('/:id', getRecept_controller_1.default);
+receptRoutes.post('/new', insertRecept_controller_1.default);
+receptRoutes.post('/edit/:id', updateRecept_controller_1.default);
+receptRoutes.post('/delete', deleteRecept_cotroller_1.default);
+receptRoutes.get('/kategorija/omiljeno', getAllOmiljeno_controller_1.default);
+receptRoutes.post('/generateReport', generateReceptReport_controller_1.default);
+exports.default = receptRoutes;

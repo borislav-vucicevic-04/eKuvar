@@ -1,0 +1,21 @@
+:root {
+  margin: 0;
+  --red: #e63946;
+  --white: #fefefe;
+  --black: #1D1D1D;
+  --bread: #D8A47F;
+  --purple: #69306D;
+  --pastel-green: #A8D5BA;
+  --blue: #345D90;
+  --midnight-blue: #152242;
+  --gold-like: gold;
+  --soft-gray: #bbbbbb;
+}
+body {
+  background-color: var(--white);
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', sans-serif;
+}

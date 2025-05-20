@@ -1,0 +1,82 @@
+.editorWrapper {
+  /* Variables */
+  --editorPadding: 0.5rem;
+  --toolbarHeight: 2.5rem;
+  width: 100%;
+  min-height: 6rem;
+  border: solid 2px var(--black);
+  border-radius: var(--editorPadding);
+  display: flex;
+  flex-direction: column;
+  resize: vertical;
+  overflow: auto;
+}
+.editorWrapper p {
+  margin: 0.5rem;
+  text-align: justify;
+}
+.editorWrapper h3 {
+  margin: 0.5rem;
+  color: var(--midnight-blue);
+}
+.toolbar {
+  display: flex;
+  gap: 1rem;
+  min-height: var(--toolbarHeight);
+  height: var(--toolbarHeight);
+  padding: var(--editorPadding);
+  background-color: var(--soft-gray);
+  border-top-left-radius: calc(var(--editorPadding) - 2px);
+  border-top-right-radius: calc(var(--editorPadding) - 2px);
+  box-sizing: border-box;
+  border-bottom: solid 2px var(--black);
+}
+.toolbar button {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+  padding: 0.25rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.toolbar button.noPadding {
+  padding: 0;
+}
+.toolbar button.padding2px {
+  padding: 2px;
+}
+.toolbar button.active .icon {
+  fill: var(--red);
+}
+.toolbar button:hover .icon {
+  fill: var(--red);
+}
+.icon {
+  height: 100%;
+  aspect-ratio: 1/1;
+  fill: var(--black);
+  transition: all 250ms;
+}
+.icon:hover {
+  fill: var(--red);
+}
+.editorContent {
+  flex: 1;
+  align-self: stretch;
+  padding: var(--editorPadding);
+  display: flex;
+}
+.editorContent > div {
+  height: 100% !important;
+  width: 100% !important;
+}
+.editorContent > div:focus {
+  outline: none;
+}
+.editorWrapper:has(:focus) {
+  border-color: var(--red);
+}
+.editorWrapper:has(:focus) .toolbar {
+  border-color: var(--red);
+}

@@ -1,0 +1,167 @@
+.container {
+  /* variables */
+  --formGap: 1.5rem;
+  --formPadding: 1.25rem;
+  --formBorderRadius: 1.25rem;
+  --labelGap: 0.25rem;
+  --labelFontSize: 1.25rem;
+  --labelInputHeight: 2rem;
+  --labelInputPadding: 0.25rem;
+  --buttonFontSize: 2rem;
+  --buttonHeight: 2rem;
+  --buttonPadding: 0.75rem;
+  --errorMessageFontSize: 0.75rem;
+  --stepBubbleSize: 3.5rem;
+  --stepBubbleFontSize: 1.75rem;
+  --stepBubbleSeparatorSize: 0.25rem;
+  /* styling */
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  min-width: 45%;
+  max-width: 45%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--formGap);
+  border-radius: var(--formBorderRadius);
+  padding: var(--formPadding);
+  
+  box-shadow: 0px 4px 10px rgba(29, 29, 29, 0.6); /* Sjena u boji #1D1D1D */
+  backdrop-filter: blur(10px); /* Zamagljivanje pozadine za stakleni efekat */
+  animation: fly-in 0.5s;
+}
+.form h1 {
+  color: var(--midnight-blue);
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-bottom: var(--midnight-blue) 2px solid;
+}
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--labelGap);
+  font-size: var(--labelFontSize);
+}
+.form label span {
+  font-weight: bold;
+}
+.form label input {
+  font-family: inherit;
+  height: var(--labelInputHeight);
+  font-size: var(--labelFontSize);
+  padding: var(--labelInputPadding);
+  border-radius: var(--labelInputPadding);
+  border: none;
+  outline: solid 2px var(--black);
+}
+.form label:has(input:focus) span {
+  color: var(--red);
+}
+.form label input:focus {
+  outline-color: var(--red);
+}
+.form button {
+  background-color: var(--red);
+  color: var(--white);
+  font-size: var(--buttonFontSize);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: bold;
+  padding: var(--buttonPadding);
+  border-radius: var(--buttonPadding);
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.form button:hover {
+  filter: brightness(135%);
+}
+.errorMessage {
+  font-size: var(--errorMessageFontSize);
+  color: var(--purple);
+  text-align: justify;
+}
+.pendingRequest {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: wait;
+}
+.stepIndicatorWrapper {
+  display: flex;
+  align-items: center;
+}
+.stepBubble {
+  height: var(--stepBubbleSize);
+  width: var(--stepBubbleSize);
+  background-color: var(--soft-gray);
+  font-size: var(--stepBubbleFontSize);
+  font-weight: bold;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.stepBubbleSeparator {
+  flex: 1;
+  justify-self: stretch;
+  height: var(--stepBubbleSeparatorSize);
+  background-color: var(--soft-gray);
+}
+.actionBtnsWrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: stretch;
+}
+.actionBtnsWrapper button {
+  flex: 1;
+}
+.active {
+  background-color: var(--red);
+}
+.successMessage {
+  color: var(--midnight-blue);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+.link {
+  font-size: 2rem;
+  color: var(--blue);
+  text-align: center;
+}
+.pendingRequest {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: wait;
+}
+@keyframes fly-in {
+  from {
+    top: -50%;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

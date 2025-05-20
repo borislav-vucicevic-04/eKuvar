@@ -1,0 +1,126 @@
+.commentWrapper {
+  /* Variables */
+  --commentPadding: 1.25rem;
+  --commentHeaderFontSize: 0.75rem;
+  --commentFooterFontSize: 0.75rem;
+  --commmentFooterBtnHeight: 2rem;
+  --commentFooterBtnPadding: 0.25rem;
+  --commentRepliesWrapperPadding: 1.25rem;
+  /* Styling */
+  padding: var(--commentPadding) 0rem;
+  border-top: solid 1px var(--bread);
+  border-bottom: solid 1px var(--bread);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.commentWrapper:nth-of-type(1) {
+  border-top: none;
+}
+.commentWrapper:nth-last-of-type(1) {
+  border-bottom: none;
+}
+.commentHeader {
+  font-size: var(--commentHeaderFontSize);
+  color: var(--red);
+  text-transform: capitalize;
+  text-decoration: italic;
+}
+.commentBody {
+  color: var(--black);
+}
+.commentFooter {
+  color: var(--black); 
+  font-size: var(--commentHeaderFontSize);
+}
+.commentFooter button img {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+}
+.commentFooter button:hover {
+  box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+}
+.replyBtn, .showRepliesBtn, .deleteCommentBtn {
+  height: var(--commmentFooterBtnHeight);
+  box-sizing: border-box;
+  font: inherit;
+  color: var(--midnight-blue);
+  border: solid 2px var(--midnight-blue);
+  padding: var(--commentFooterBtnPadding);
+  border-radius: var(--commentFooterBtnPadding);
+  cursor: pointer;
+  background-color: var(--white);
+  margin-right: var(--commentFooterBtnPadding);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--commentFooterBtnPadding);
+  transition: all 500ms;
+}
+.deleteCommentBtn {
+  color: var(--red);
+  border-color: var(--red);
+}
+.commentForm {
+  width: 100%;
+}
+.commentForm .textareaWrapper {
+  position: relative;
+}
+.commentForm .textareaWrapper span {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--soft-gray);
+}
+.commentForm textarea {
+  width: 100% !important;
+  resize: vertical;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: solid 2px var(--bread);
+  transition: box-shadow 500ms;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background-color: var(--white);
+  margin-bottom: 0.5rem;
+  min-height: 5rem;
+}
+.commentForm textarea:focus {
+  outline: solid 2px var(--bread);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.commentForm button {
+  box-sizing: border-box;
+  padding: 0.375rem;
+  border-radius: 0.375rem;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 500ms;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+}
+.commentForm .submit {
+  background-color: var(--midnight-blue);
+}
+.commentForm .delete {
+  background-color: var(--red);
+}
+.commentForm button:hover {
+  filter: brightness(175%);
+}
+.commentForm button::first-letter {
+  text-transform: capitalize;
+}
+.commentRepliesWrapper {
+  width: calc(100% - var(--commentRepliesWrapperPadding));
+  margin-left: var(--commentRepliesWrapperPadding);
+  padding-left: var(--commentRepliesWrapperPadding);
+  box-sizing: border-box;
+  border-left: solid 2px var(--bread);
+}

@@ -1,0 +1,107 @@
+.container {
+  /* Variables */
+  --myAccountGap: 1.5rem;
+  --myAccountH1FontSize: 3.5rem;
+  --myAccountH2FontSize: 2.25rem;
+  --myAccountH3FontSize: 1.5rem;
+  --myAccountHeaderPadding: 2rem;
+  --printBtnSize: 3rem;
+  --printBtnPadding: 0.5rem;
+  /* Style */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: var(--myAccountGap);
+}
+.contentWrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 65rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--myAccountGap);
+}
+.titleWrapper {
+  position: relative;
+}
+.printBtn {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  background-color: var(--red);
+  height: var(--printBtnSize);
+  aspect-ratio: 1 / 1;
+  padding: var(--printBtnPadding);
+  box-sizing: border-box;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  transition: all 500ms;
+}
+.printBtn:hover {
+  filter: brightness(150%);
+}
+.printBtn img {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  
+}
+.title {
+  margin: 0;
+  text-align: center;
+  color: var(--midnight-blue);
+  padding: var(--myAccountHeaderPadding) 0;
+  border-bottom: solid 2px var(--bread);
+  font-size: var(--myAccountH1FontSize);
+}
+.subtitle {
+  margin: 0;
+  color: var(--midnight-blue);
+  font-size: var(--myAccountH2FontSize);
+}
+.table, .reportTable {
+  width: 100%;
+  margin: 0 auto;
+  border-spacing: 0;
+  border: solid 2px var(--black);
+}
+.table td, .table th, .reportTable td, .reportTable th {
+  padding: 0.5rem;
+  background-color: inherit;
+}
+.table th{
+  text-align: left;
+}
+.table td{
+  text-align: right;
+  text-transform: capitalize;
+}
+.table tr:nth-of-type(2n) {
+  background-color: var(--soft-gray);
+}
+
+.reportTable tr:nth-of-type(2n) {
+  background-color: var(--soft-gray);
+}
+.reportTable thead tr {
+  background-color: var(--soft-gray);
+}
+.reportTable .number {
+  text-align: right;
+}
+.reportTable .string {
+  text-align: left;
+  text-transform: capitalize;
+}
+.pendingRequest {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: wait;
+}
