@@ -73,12 +73,12 @@ This project was developed as part of a university course called **Databases**, 
 
 ## 🎥 Demo
 
-📽️ [Register, LogIn and change password](https://drive.google.com/file/d/1-B6r468y_pKScmYmehlrzQhyfRqqye6X/view?usp=sharing)
-📽️ [Deactivate and Reactivate the account](https://drive.google.com/file/d/1-9QH6DZQBS6vCVSBj2secvJfot9s4_oM/view?usp=sharing)
-📽️ [Create, edit and delete recepies](https://drive.google.com/file/d/1m5rOnxYJdn7wd1-5-EnxmXORMdQJxINT/view?usp=sharing)
-📽️ [View, rate, acrhive and print recepies](https://drive.google.com/file/d/1-4oFs9FTlJNb7tvyD88aD8EgdT1zRn0c/view?usp=sharing)
-📽️ [Write and delete comments on recepies](https://drive.google.com/file/d/1-76oZe2o48MOFZlMJGApW8A7keIAjcJC/view?usp=sharing)
-📽️ [Filter recepies and view analytics](https://drive.google.com/file/d/1-A0lYVfEGZYq86H6DgCMT1gnnWZHRKzo/view?usp=sharing)
+- 📽️ [Register, LogIn and change password](https://drive.google.com/file/d/1-B6r468y_pKScmYmehlrzQhyfRqqye6X/view?usp=sharing)
+- 📽️ [Deactivate and Reactivate the account](https://drive.google.com/file/d/1-9QH6DZQBS6vCVSBj2secvJfot9s4_oM/view?usp=sharing)
+- 📽️ [Create, edit and delete recepies](https://drive.google.com/file/d/1m5rOnxYJdn7wd1-5-EnxmXORMdQJxINT/view?usp=sharing)
+- 📽️ [View, rate, acrhive and print recepies](https://drive.google.com/file/d/1-4oFs9FTlJNb7tvyD88aD8EgdT1zRn0c/view?usp=sharing)
+- 📽️ [Write and delete comments on recepies](https://drive.google.com/file/d/1-76oZe2o48MOFZlMJGApW8A7keIAjcJC/view?usp=sharing)
+- 📽️ [Filter recepies and view analytics](https://drive.google.com/file/d/1-A0lYVfEGZYq86H6DgCMT1gnnWZHRKzo/view?usp=sharing)
 ---
 
 ## 👤 Author
